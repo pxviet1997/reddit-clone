@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Reddit clone, build with Ruby on Rails, integrated with TailwindCss. The app is the result of a course called Hello Rails at [hellorails.io](https://hellorails.io)
 
-Things you may want to cover:
+## Modeling
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- User: the user
+- Submission: the submission from the user, has different media: text, image/video, link, etc
+- Community: category based on submissions
+- Comments: comments of submissions
+- Subscription: subscription to a community, from a user
