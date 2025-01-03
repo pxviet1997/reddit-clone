@@ -1,0 +1,43 @@
+<header>
+  <nav class="h-20 bg-white border-b border-gray-400 shadow" role="navigation" aria-label="main navigation">
+    <div class="flex flex-wrap items-center justify-center h-full px-4 lg:justify-start lg:content-center lg:px-6">
+      <%= link_to root_path do %>
+        <h1 class="pr-2 text-lg font-semibold uppercase">Reddit</h1>
+      <%end%>
+
+      <div class="flex items-center justify-start flex-1 w-full lg:w-2/3">
+        <div class="px-0 mb-2 md:px-4 lg:mb-0">
+          <select class="!pr-10 select">
+            <option>Community 1</option>
+            <option>Community 2</option>
+            <option>Community 3</option>
+          </select>
+        </div>
+
+        <div class="flex justify-center flex-1 w-full px-0 lg:w-1/2 md:px-2">
+          <div class="relative flex w-1/2 items-center gap-2 py-2 px-4 bg-[#DBE4E8] rounded-full" >
+            <%= render_svg 'icons/magnifying-glass', styles: 'stroke-current text-gray-600' %>
+            <input type="text" class="w-full bg-transparent appearance-none focus:outline-none" placeholder="Search...">
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <% if user_signed_in? %>
+            <%= link_to new_submission_path, class: 'flex item-center' do %>
+
+              <div class="flex items-center gap-2 btn btn-indigo">
+                <div class="flex items-center"> <%= render_svg 'icons/plus', styles: 'text-white' %></div>
+                <p>New Post</p>
+              </div>
+            <% end %>
+            <%= link_to "Sign out", destroy_user_session_path, "data-turbo-method": :delete, class: 'btn btn-outline' %>
+          <% else %>
+            <%= link_to 'Login', new_user_session_path, class: 'btn btn-outline' %>
+            <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-indigo' %>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
