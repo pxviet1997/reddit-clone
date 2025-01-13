@@ -68,6 +68,6 @@ gem 'devise', '~> 4.9', '>= 4.9.4'
 
 gem 'inline_svg', '~> 1.10'
 
-gem 'rubocop', '~> 1.69', require: false
+gem 'rubocop', '~> 1.70', require: false
 
 gem 'rubocop-erb', '~> 0.5.5'
